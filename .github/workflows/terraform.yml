@@ -12,5 +12,5 @@ jobs:
           echo "::add-path:: $HOME/.tfenv/bin"
       - run: echo "$PATH"
       - run: terraform -version
-      - run: tfenv install 0.12.24
-      - run: terraform -version
+      - run: $HOME/.tfenv/bin/tfenv install 0.12.24
+      - run: $HOEM/.tfenv/bin/terraform -version
