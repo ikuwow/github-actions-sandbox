@@ -21,4 +21,5 @@ jobs:
           sudo bash -c 'echo "echo It works!" > /usr/local/bin/works_or_not'
           sudo chmod a+x /usr/local/bin/works_or_not
           works_or_not
-      - run: which tfenv
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
