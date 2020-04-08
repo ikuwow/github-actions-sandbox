@@ -17,6 +17,6 @@ jobs:
           $HOME/.tfenv/bin/tfenv use 0.12.23
       - run: $HOME/.tfenv/bin/terraform -version
       - run: |
-          echo "echo 'It works!'" > /usr/local/bin/works_or_not
-          chmod a+x /usr/local/bin/works_or_not
+          sudo bash -c 'echo "echo It works!" > /usr/local/bin/works_or_not'
+          sudo chmod a+x /usr/local/bin/works_or_not
           works_or_not
