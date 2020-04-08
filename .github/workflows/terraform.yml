@@ -6,5 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: terraform -version
-
+      - name: Install tfenv
+        run: |
+          git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+          sudo ln -sf ~/.tfenv/bin/* /usr/local/bin
+      - run: |
+          tfenv install 0.12.23
+          tfenv use 0.12.23
+      - run: |
+          which terraform
+          terraform -version
