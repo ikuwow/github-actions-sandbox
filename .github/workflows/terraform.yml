@@ -8,9 +8,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install tfenv
         run: |
-          git clone https://github.com/tfutils/tfenv.git ~/.tfenv
-          echo "::add-path:: $HOME/.tfenv/bin"
-      - run: echo "$PATH"
+          sudo git clone https://github.com/tfutils/tfenv.git /usr/local/tfenv
+          sudo ln -sf /usr/local/tfenv/bin/* /usr/local/bin
       - run: which terraform
       - run: terraform -version
       - run: |
