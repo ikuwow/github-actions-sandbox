@@ -8,17 +8,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install tfenv
         run: |
-          sudo git clone https://github.com/tfutils/tfenv.git /usr/local/tfenv
-          sudo ln -sf /usr/local/tfenv/bin/* /usr/local/bin
-      - run: which terraform
-      - run: terraform -version
+          git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+          sudo ln -sf ~/.tfenv/bin/* /usr/local/bin
       - run: |
-          $HOME/.tfenv/bin/tfenv install 0.12.23
-          $HOME/.tfenv/bin/tfenv use 0.12.23
-      - run: $HOME/.tfenv/bin/terraform -version
+          tfenv install 0.12.23
+          tfenv use 0.12.23
       - run: |
-          sudo bash -c 'echo "echo It works!" > /usr/local/bin/works_or_not'
-          sudo chmod a+x /usr/local/bin/works_or_not
-          works_or_not
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v2
+          which terraform
+          terraform -version
