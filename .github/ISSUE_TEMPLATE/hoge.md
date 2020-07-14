@@ -1,9 +1,9 @@
 ---
-name: named report
+name: 日本語のテンプレート
 about: にほんごのテンプレート
-title: 'でふぉるとたいとる'
-labels: 'でふぉるとらべる'
-assignees: '@ikuwow'
+title: ''
+labels: ''
+assignees: ''
 ---
 
 ## ほげ

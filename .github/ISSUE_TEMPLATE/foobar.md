@@ -1,8 +1,8 @@
 ---
-name: foobar
+name: English template
 about: english
-title: 'default title'
-labels: 'default label'
+title: ''
+labels: ''
 assignees: '@ikuwow'
 ---
 
