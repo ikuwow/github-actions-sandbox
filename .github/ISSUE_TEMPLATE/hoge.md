@@ -4,6 +4,7 @@ about: にほんごのテンプレート
 title: ''
 labels: ''
 assignees: ''
+
 ---
 
 ## ほげ
