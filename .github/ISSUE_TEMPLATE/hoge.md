@@ -1,5 +1,5 @@
 ---
-name: hoge
+name: ほげ
 about: にほんごのテンプレート
 title: 'でふぉるとたいとる'
 labels: 'でふぉるとらべる'
