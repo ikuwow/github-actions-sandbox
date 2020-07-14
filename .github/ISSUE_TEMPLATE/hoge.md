@@ -1,5 +1,5 @@
 ---
-name: ほげ
+name: named report
 about: にほんごのテンプレート
 title: 'でふぉるとたいとる'
 labels: 'でふぉるとらべる'
