@@ -3,7 +3,7 @@ name: Auto approve
 on:
   pull_request:
     paths:
-      - /myfiles/**
+      - myfiles/**
 
 jobs:
   auto_approve:
