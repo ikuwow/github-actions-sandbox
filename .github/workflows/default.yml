@@ -20,11 +20,16 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  failing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
   conclustion:
     runs-on: ubuntu-latest
     if: always()
     needs:
       - build
+      - failing
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - run: |
