@@ -24,12 +24,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: exit 1
+  skipping:
+    runs-on: ubuntu-latest
+    if: false
+    steps:
+      - run: echo 'Do nothing.'
   conclustion:
     runs-on: ubuntu-latest
     if: always()
     needs:
       - build
-      - failing
+      # - failing
+      - skipping
     steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - run: |
