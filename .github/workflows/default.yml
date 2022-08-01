@@ -1,10 +1,14 @@
+---
 name: Default workflow
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
