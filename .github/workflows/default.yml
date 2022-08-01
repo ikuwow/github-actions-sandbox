@@ -20,7 +20,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  conclustion:
+    runs-on: ubuntu-latest
+    if: always()
+    needs:
+      - build
+    steps:
       - uses: technote-space/workflow-conclusion-action@v3
       - run: |
           echo "$WORKFLOW_CONCLUSION"
-
