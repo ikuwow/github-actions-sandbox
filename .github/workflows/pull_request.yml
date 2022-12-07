@@ -19,3 +19,5 @@ jobs:
           echo "base_ref: ${{ github.base_ref }}"
           echo "head_ref: ${{ github.head_ref }}"
           echo "ref: ${{ github.ref }}"
+          echo "sha: ${{ github.sha }}"
+          echo "GITHUB_REF: $GITHUB_REF"
