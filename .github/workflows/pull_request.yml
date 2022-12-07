@@ -1,3 +1,5 @@
+name: Pull request trigger
+
 on:
   pull_request:
     branches:
