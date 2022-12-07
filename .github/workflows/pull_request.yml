@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get_sha1
-        command: echo $GITHUB_SHA1
+        run: echo $GITHUB_SHA1
