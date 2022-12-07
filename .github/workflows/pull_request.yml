@@ -1,0 +1,11 @@
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get_sha1
+        command: echo $GITHUB_SHA1
