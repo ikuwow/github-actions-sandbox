@@ -1,0 +1,10 @@
+name: Check kustomize version
+
+on: push
+
+jobs:
+  check_kustomize_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        run: kustomize version
