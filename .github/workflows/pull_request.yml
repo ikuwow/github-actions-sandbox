@@ -1,0 +1,23 @@
+name: Pull request trigger
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    branches:
+      - master
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get_sha1
+        run: |
+          echo "base_ref: ${{ github.base_ref }}"
+          echo "head_ref: ${{ github.head_ref }}"
+          echo "ref: ${{ github.ref }}"
+          echo "sha: ${{ github.sha }}"
+          echo "GITHUB_REF: $GITHUB_REF"
