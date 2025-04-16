@@ -15,9 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get_sha1
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
         run: |
-          echo "base_ref: ${{ github.base_ref }}"
-          echo "head_ref: ${{ github.head_ref }}"
+          echo "base_ref: $BASE_REF"
+          echo "head_ref: $HEAD_REF"
           echo "ref: ${{ github.ref }}"
           echo "sha: ${{ github.sha }}"
           echo "GITHUB_REF: $GITHUB_REF"

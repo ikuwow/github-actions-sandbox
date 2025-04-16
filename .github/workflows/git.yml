@@ -10,7 +10,7 @@ jobs:
           git branch
       - name: workaround for detached HEAD
         run: |
-          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+          git checkout "${GITHUB_REF#refs/heads/}" || git checkout -b "${GITHUB_REF#refs/heads/}" && git pull
       - run: |
           git status
           git branch
